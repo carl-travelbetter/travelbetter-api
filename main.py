@@ -18,3 +18,12 @@ app.add_middleware(
 @app.get("/")
 def home():
     return {"message": "Hello from TravelBetter Python!"}
+
+@app.get("/double")
+def double_number(number: float):
+    result = number * 2
+
+    return {
+        "number": number,
+        "result": result
+    }
